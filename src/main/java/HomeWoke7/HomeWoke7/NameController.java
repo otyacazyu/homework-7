@@ -14,18 +14,18 @@ import java.util.List;
 
 @RestController
 public class NameController {
+    @GetMapping("/names")
+    public List<NameResponse> gatName() {
+        List<NameResponse> names = List.of(
+                new NameResponse("tarou", "T", "tanaka", 14),
+                new NameResponse("caroline", "S", "sibata", 18),
+                new NameResponse("tukasa", "O", "oota", 15));pwd
+        return names;
+    }
 
-   @GetMapping("/names")
-   public List<NameResponse>gatName(){
-       List<NameResponse> names = List.of(
-               new NameResponse("tarou","T","tanaka",14),
-               new NameResponse("caroline","S","sibata",18),
-               new NameResponse("tukasa","O","oota",15));
-       return names;
-   }
-@PostMapping("/names")
-    public ResponseEntity<NameUpdeteResponse> responseName(@RequestBody NameUpdeteResponse nameResponse, UriComponentsBuilder uriComponentsBuilder){
-       URI uri = uriComponentsBuilder.path("/name/{id}").buildAndExpand(1).toUri();
-       return ResponseEntity.created(uri).body(new NameUpdeteResponse("a new name is created!"));
-}
+    @PostMapping("/names")
+    public ResponseEntity<NameUpdeteResponse> responseName(@RequestBody NameUpdeteResponse nameResponse, UriComponentsBuilder uriComponentsBuilder) {
+        URI uri = uriComponentsBuilder.path("/name/{id}").buildAndExpand(1).toUri();
+        return ResponseEntity.created(uri).body(new NameUpdeteResponse("a new name is created!"));
+    }
 }
