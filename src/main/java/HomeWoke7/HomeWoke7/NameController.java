@@ -19,7 +19,8 @@ public class NameController {
         List<NameResponse> names = List.of(
                 new NameResponse("tarou", "T", "tanaka", 14),
                 new NameResponse("caroline", "S", "sibata", 18),
-                new NameResponse("tukasa", "O", "oota", 15));pwd
+                new NameResponse("tukasa", "O", "oota", 15));
+
         return names;
     }
 
