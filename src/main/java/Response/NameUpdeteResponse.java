@@ -7,6 +7,7 @@ public class NameUpdeteResponse {
         this.message = message;
     }
 
+
     public String getMessage() {
         return message;
     }
