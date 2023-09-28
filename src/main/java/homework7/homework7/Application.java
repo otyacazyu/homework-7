@@ -1,4 +1,4 @@
-package HomeWoke7.HomeWoke7;
+package homework7.homework7;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

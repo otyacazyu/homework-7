@@ -1,9 +1,9 @@
-package Response;
+package homework7.homework7;
 
-public class NameUpdeteResponse {
+public class NameCreateRequest {
     private String message;
 
-    public NameUpdeteResponse(String message) {
+    public NameCreateRequest(String message) {
         this.message = message;
     }
 

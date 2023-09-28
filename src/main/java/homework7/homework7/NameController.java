@@ -1,7 +1,5 @@
-package HomeWoke7.HomeWoke7;
+package homework7.homework7;
 
-import Response.NameResponse;
-import Response.NameUpdeteResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,8 +23,8 @@ public class NameController {
     }
 
     @PostMapping("/names")
-    public ResponseEntity<NameUpdeteResponse> responseName(@RequestBody NameUpdeteResponse nameResponse, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<NameCreateResponse> responseName(@RequestBody NameCreateRequest nameResponse, UriComponentsBuilder uriComponentsBuilder) {
         URI uri = uriComponentsBuilder.path("/name/{id}").buildAndExpand(1).toUri();
-        return ResponseEntity.created(uri).body(new NameUpdeteResponse("a new name is created!"));
+        return ResponseEntity.created(uri).body(new NameCreateResponse("a new name is created!"));
     }
 }
