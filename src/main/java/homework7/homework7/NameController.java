@@ -23,8 +23,8 @@ public class NameController {
     }
 
     @PostMapping("/names")
-    public ResponseEntity<NameCreateResponse> responseName(@RequestBody NameCreateRequest nameResponse, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<NameCreateRequest> responseName(@RequestBody NameCreateRequest nameResponse, UriComponentsBuilder uriComponentsBuilder) {
         URI uri = uriComponentsBuilder.path("/name/{id}").buildAndExpand(1).toUri();
-        return ResponseEntity.created(uri).body(new NameCreateResponse("a new name is created!"));
+        return ResponseEntity.created(uri).body(new NameCreateRequest("tanaka","T"));
     }
 }
