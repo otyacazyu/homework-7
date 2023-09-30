@@ -1,4 +1,4 @@
-package Response;
+package homework7.homework7;
 
 public class NameResponse {
     private String givenName;
